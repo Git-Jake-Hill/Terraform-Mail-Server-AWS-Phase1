@@ -32,6 +32,7 @@ module "ec2" {
   source            = "./modules/ec2"
   subnet_id         = module.vpc.private_subnet_id
   security_group_id = module.security_groups.ec2_security_group_id
+  nat_gateway_id    = module.vpc.nat_gateway_id
 }
 
 module "alb" {

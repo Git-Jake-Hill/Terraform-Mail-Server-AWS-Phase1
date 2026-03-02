@@ -24,6 +24,7 @@ resource "aws_instance" "email_server" {
   vpc_security_group_ids = [var.security_group_id]
 
   user_data = templatefile("${path.module}/user_data_script.sh", {})
+  depends_on = [ var.nat_gateway_id ]
 
   tags = {
     Name = "Ubuntu-Noble-2404-Email-Server"
