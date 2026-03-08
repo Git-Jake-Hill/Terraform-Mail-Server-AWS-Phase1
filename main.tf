@@ -44,3 +44,8 @@ module "alb" {
   target_ec2_port        = 8025
   vpc_id                 = module.vpc.vpc_id
 }
+
+output "alb_url" {
+  value       = "http://${module.alb.alb_dns_name}"
+  description = "URL to access the mail server UI"
+}
