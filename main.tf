@@ -1,5 +1,6 @@
 data "aws_caller_identity" "current" {}
 
+# Simple check to avoid deploying to the wrong AWS account
 locals {
   expected_account_id = "851725300754" # Your sandbox account
 }
