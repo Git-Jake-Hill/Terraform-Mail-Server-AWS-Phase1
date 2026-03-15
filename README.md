@@ -96,9 +96,9 @@ aws configure set aws_secret_access_key <YOUR_SECRET> --profile sandbox
 	- Impact: enables access control.
 
 - **Backend SMTP email generator service**
-	- Goal: create a serivce to populate emails through SMTP instead of running scripts manually via the SSM agent.
+	- Goal: create a service to populate emails through SMTP instead of running scripts manually via the SSM agent.
 	- Terraform scope: backend worker/lambda function, IAM permissions, trigger setup.
-	- Impact: additional sevices to mangage (more realistic scenario).
+	- Impact: additional services to manage (more realistic scenario).
 
 - **Pre-baked AMI with Docker/Mailpit dependencies**
 	- Goal: speed up instance boot and remove runtime dependency installation.
